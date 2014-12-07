@@ -1,0 +1,9 @@
+<nav class="pagination" role="navigation">
+    {% if pagination.hasNext %}
+        <a class="older-posts" href="{{ base_url }}{{ pagination.params }}{{ pagination.nextUrl }}">&larr; Older posts</a>
+    {% endif %}
+    <span class="page-number">Page {{ uri.currentPage }} of {{ pagination|length }}</span>
+    {% if pagination.hasPrev %}
+        <a class="newer-posts" href="{{ base_url }}{{ pagination.params }}{{ pagination.prevUrl }}">Newer posts &rarr;</a>
+    {% endif %}
+</nav>
