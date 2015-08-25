@@ -1,5 +1,5 @@
 name: Mediator
-version: 1.0.3
+version: 1.1.0
 description: "Mediator theme by Dirk Fabisch ported to **Grav**"
 icon: bullseye
 author:
@@ -13,5 +13,4 @@ bugs: https://github.com/getgrav/grav-theme-mediator/issues
 license: MIT
 
 form:
-  validation: strict
-  fields:
+  validation: loose
