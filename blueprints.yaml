@@ -13,5 +13,4 @@ bugs: https://github.com/getgrav/grav-theme-mediator/issues
 license: MIT
 
 form:
-  validation: strict
-  fields:
+  validation: loose
