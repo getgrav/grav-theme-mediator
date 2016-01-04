@@ -35,7 +35,7 @@
 {% set home = pages.find(config.system.home.alias) %}
 
     {% block header %}
-        <a href="{{ base_url_relative }}" class="logo-readium"><span class="logo" style="background-image: url({{ base_url_relative }}{{ site.logo }})"></span></a>
+        <a href="{{ home.url }}" class="logo-readium"><span class="logo" style="background-image: url({{ base_url_relative }}{{ site.logo }})"></span></a>
     {% endblock %}
 
     <!-- content start -->
