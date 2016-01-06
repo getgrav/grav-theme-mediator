@@ -1,3 +1,12 @@
+# v1.2.0
+## 01/06/2016
+
+1. [](#improved)
+    * Dropped an extraneous debug statement
+1. [](#bugfix)
+	* Fixed RSS link
+	* Fix tag links on a root domain site
+
 # v1.1.0
 ## 08/25/2015
 
