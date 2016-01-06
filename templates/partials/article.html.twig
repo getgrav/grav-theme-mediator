@@ -13,7 +13,7 @@
         <div class="post-meta">
             <time datetime="{{ post.date | date(site.date_long) }}">{{ post.date | date(site.date_long) }}</time>
             {% if post.taxonomy.tag|length > 0 %}
-            <span class="post-tags-set">in {% for tag in post.taxonomy.tag %}<span class="post-tag-{{tag}}"><a href="{{ home.url }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a></span>{%if not loop.last %} + {% endif %}{% endfor %}</span>
+            <span class="post-tags-set">in {% for tag in post.taxonomy.tag %}<span class="post-tag-{{tag}}"><a href="{{ base_url }}/tag{{ config.system.param_sep }}{{ tag }}">{{ tag }}</a></span>{%if not loop.last %} + {% endif %}{% endfor %}</span>
             {% endif %}
         </div>
     </div>
