@@ -1,3 +1,7 @@
+{% if base_url == '' %}
+    {% set base_url = '/' %}
+{% endif %}
+
 <nav class="pagination" role="navigation">
     {% if pagination.hasNext %}
         {% set url = (base_url ~ pagination.params ~ pagination.nextUrl)|replace({'//':'/'}) %}
