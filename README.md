@@ -47,7 +47,7 @@ This command will check your Grav install to see if your Mediator theme is due f
 Manually updating Mediator is pretty simple. Here is what you will need to do to get this done:
 
 * Delete the `your/site/user/themes/mediator` directory.
-* Downalod the new version of the Mediator theme from either [GitHub](https://github.com/getgrav/grav-plugin-mediator) or [GetGrav.org](http://getgrav.org/downloads/themes#extras).
+* Download the new version of the Mediator theme from either [GitHub](https://github.com/getgrav/grav-plugin-mediator) or [GetGrav.org](http://getgrav.org/downloads/themes#extras).
 * Unzip the zip file in `your/site/user/themes` and rename the resulting folder to `mediator`.
 * Clear the Grav cache. The simplest way to do this is by going to the root Grav directory in terminal and typing `bin/grav clear-cache`.
 
