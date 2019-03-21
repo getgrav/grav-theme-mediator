@@ -1,5 +1,5 @@
 name: Mediator
-version: 1.3.0
+version: 1.4.0
 description: "Mediator theme by Dirk Fabisch ported to **Grav**"
 icon: bullseye
 author:
@@ -11,6 +11,8 @@ demo: http://demo.getgrav.org/mediator-skeleton
 keywords: mediator, theme, modern, fast, responsive, blog
 bugs: https://github.com/getgrav/grav-theme-mediator/issues
 license: MIT
+dependencies:
+  - { name: grav, version: '>=1.5.10' }
 
 form:
   validation: loose
