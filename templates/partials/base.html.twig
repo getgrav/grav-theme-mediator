@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ grav.language.getLanguage ?: 'en' }}">
+<html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}">
 <head>
     <meta charset="utf-8">
     <!-- (1) Optimize for mobile versions: http://goo.gl/EOpFl -->
@@ -8,25 +8,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-    <meta name="description" content="{{ site.description }}" />
-
+    {% include 'partials/metadata.html.twig' %}
     <meta name="HandheldFriendly" content="True" />
     <meta name="MobileOptimized" content="320" />
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
-    {% for meta in page.metadata %}
-    <meta {% if meta.name %}name="{{ meta.name }}" {% endif %}{% if meta.http_equiv %}http-equiv="{{ meta.http_equiv }}" {% endif %}{% if meta.charset %}charset="{{ meta.charset }}" {% endif %}{% if meta.property %}property="{{ meta.property }}" {% endif %}{% if meta.content %}content="{{ meta.content }}" {% endif %}/>
-    {% endfor %}
 
     <link rel="canonical" href="{{ page.url() }}">
     <link rel="shortcut icon" href="{{ theme_url }}/images/favicon.png">
     <link rel="stylesheet" href="http://brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
-    {% do assets.addCss('theme://css/main.css') %}
-    {# {% do assets.addCss('theme://css/print.css') %} #}
-    {{ assets.css() }}
+    {% block stylesheets %}
+        {% do assets.addCss('theme://css/main.css') %}
+        {# {% do assets.addCss('theme://css/print.css') %} #}
+    {% endblock %}
+    
+    {% block assets deferred %}
+        {{ assets.css()|raw }}
+    {% endblock %}
 </head>
 {% block body %}
 <body>
@@ -62,7 +62,10 @@
     <!-- footer end -->
     {% endblock %}
 
-{% include 'partials/javascripts.html.twig' %}
-
+    {% include 'partials/javascripts.html.twig' %}
+    {% block bottom %}
+        {{ assets.js()|raw }}
+        {{ assets.js('bottom')|raw }}
+    {% endblock %}
 </body>
 </html>

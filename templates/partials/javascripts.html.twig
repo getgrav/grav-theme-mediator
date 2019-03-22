@@ -3,8 +3,6 @@
 {% do assets.addJs('theme://js/index.js') %}
 {% do assets.addJs('theme://js/readingTime.min.js') %}
 
-{{ assets.js() }}
-
 <script>
 (function ($) {
   "use strict";
@@ -25,7 +23,7 @@
     var height = $('.article-image').height();
     $('.post-content').css('padding-top', height + 'px');
 
-    $('a[href*=#]:not([href=#])').click(function() {
+    $('a[href*=\\#]:not([href=\\#])').click(function() {
       if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
        && location.hostname == this.hostname) {
         var target = $(this.hash);
