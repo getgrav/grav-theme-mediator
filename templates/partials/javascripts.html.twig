@@ -2,6 +2,10 @@
 {% do assets.addJs('theme://js/jquery.fitvids.js') %}
 {% do assets.addJs('theme://js/index.js') %}
 {% do assets.addJs('theme://js/readingTime.min.js') %}
+{% block bottom %}
+  {{ assets.js()|raw }}
+  {{ assets.js('bottom')|raw }}
+{% endblock %}
 
 <script>
 (function ($) {
