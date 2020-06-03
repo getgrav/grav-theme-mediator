@@ -16,16 +16,24 @@
 
     <link rel="canonical" href="{{ page.url() }}">
     <link rel="shortcut icon" href="{{ theme_url }}/images/favicon.png">
-    <link rel="stylesheet" href="http://brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
     {% block stylesheets %}
+        {% do assets.addCss('http://brick.a.ssl.fastly.net/Linux+Libertine:400,400i,700,700i/Open+Sans:400,400i,700,700i') %}
+        {% do assets.addCss('//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css') %}
         {% do assets.addCss('theme://css/main.css') %}
         {# {% do assets.addCss('theme://css/print.css') %} #}
+    {% endblock %}
+
+    {% block javascripts %}
+        {% do assets.add('jquery', {group: 'bottom', priority: 101}) %}
+        {% do assets.addJs('theme://js/jquery.fitvids.js', {group: 'bottom'}) %}
+        {% do assets.addJs('theme://js/readingTime.min.js', {group: 'bottom'}) %}
+        {% do assets.addJs('theme://js/index.js', {group: 'bottom'}) %}
     {% endblock %}
     
     {% block assets deferred %}
         {{ assets.css()|raw }}
+        {{ assets.js()|raw }}
     {% endblock %}
 </head>
 {% block body %}
@@ -35,7 +43,7 @@
 {% set home = pages.find(config.system.home.alias) %}
 
     {% block header %}
-        <a href="{{ base_url_relative }}" class="logo-readium"><span class="logo" style="background-image: url({{ base_url_relative }}{{ site.logo }})"></span></a>
+        <a href="{{ base_url_relative }}" class="logo-readium"><span class="logo" style="background-image: url({{ uri.rootUrl() }}{{ site.logo }})"></span></a>
     {% endblock %}
 
     <!-- content start -->
@@ -62,10 +70,9 @@
     <!-- footer end -->
     {% endblock %}
 
-    {% include 'partials/javascripts.html.twig' %}
     {% block bottom %}
-        {{ assets.js()|raw }}
         {{ assets.js('bottom')|raw }}
     {% endblock %}
+    {% include 'partials/javascripts.html.twig' %}
 </body>
 </html>

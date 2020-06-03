@@ -1,5 +1,7 @@
 name: Mediator
-version: 1.4.0
+slug: mediator
+type: theme
+version: 1.5.0
 description: "Mediator theme by Dirk Fabisch ported to **Grav**"
 icon: bullseye
 author:
