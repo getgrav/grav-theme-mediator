@@ -1,3 +1,11 @@
+# v1.5.0
+## 06/03/2020
+
+1. [](#new)
+    * Multilanguage support [#12](https://github.com/getgrav/grav-theme-mediator/pull/12)
+1. [](#improved)
+    * Modernized & cleaned up asssets
+
 # v1.4.0
 ## 03/21/2019
 
