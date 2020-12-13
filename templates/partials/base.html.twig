@@ -30,7 +30,7 @@
         {% do assets.addJs('theme://js/readingTime.min.js', {group: 'bottom'}) %}
         {% do assets.addJs('theme://js/index.js', {group: 'bottom'}) %}
     {% endblock %}
-    
+
     {% block assets deferred %}
         {{ assets.css()|raw }}
         {{ assets.js()|raw }}
@@ -51,7 +51,7 @@
     {% block content %}
     <div class="page-content">
         <div class="wrapper">
-            {{ content }}
+            {{ content|raw }}
         </div>
     </div>
     {% endblock %}
