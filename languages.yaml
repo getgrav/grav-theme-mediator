@@ -1,0 +1,55 @@
+fr:
+  LINKS:
+    ABOUT: À propos
+    RSS: Flux RSS
+    BACK_OVERVIEW: Retour aux articles
+  TAGS:
+    FEATURED: À la une
+    REGULAR: Chonologique
+  METADATA:
+    IN_POST: dans
+    ON_POST: le
+  FOOTER:
+    RIGHTS: Tous droits réservés.
+    CONTENT: Tout contenu réservé
+    GRAV: Site Web construit avec
+  ARTICLE:
+    AUTHOR: Écrit par
+    SUPPORTED: Informations
+    SUPPORT_GRAV: Fièrement publié avec
+    PUBLISHED: Publié le
+    AUTHOR_LOGO: Logo du Blog
+  PAGINATION:
+    OF: sur
+    OLDER: Articles plus anciens
+    NEWER: Articles plus récents
+  HEADER:
+    TEASER_IMAGE: Image de fond
+    
+en:
+  LINKS:
+    ABOUT: About
+    RSS: Subscribe!
+    BACK_OVERVIEW: Back to Overview
+  TAGS:
+    FEATURED: Featured
+    REGULAR: Regular
+  METADATA:
+    IN_POST: in
+    ON_POST: on
+  FOOTER:
+    RIGHTS: All rights reserved.
+    CONTENT: All content copyright
+    GRAV: Made with
+  ARTICLE:
+    AUTHOR: Written by
+    SUPPORTED: Supported by
+    SUPPORT_GRAV: Proudly published with
+    PUBLISHED: Published
+    AUTHOR_LOGO: Blog Logo
+  PAGINATION:
+    OF: of
+    OLDER: Older posts
+    NEWER: Newer posts
+  HEADER:
+    TEASER_IMAGE: Teaser Image
