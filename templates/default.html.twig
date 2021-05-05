@@ -7,7 +7,7 @@
       <div class="wrapper">
         <div class="teaserimage">
             <div class="teaserimage-image" {% if page.header.cover %}style="background-image: url({{ page.media[page.header.cover].url }})"{% endif %}>
-                Teaser Image
+                {{ 'HEADER.TEASER_IMAGE'|t }}
             </div>
         </div>
       </div>
@@ -28,7 +28,7 @@
                 &nbsp;&nbsp;·&nbsp;&nbsp;
             {% endif %}
           {% endfor %}
-          <a href="{{ base_url_relative }}/about">About</a>
+          <a href="{{ base_url_relative }}/about">{{ 'LINKS.ABOUT'|t }}</a>
         </div>
     </header>
 
@@ -37,7 +37,7 @@
         {% set featured = taxonomy.findTaxonomy({'tag':'featured'}) %}
 
         {% if featured and featured|length > 0 and uri.currentPage == 1 %}
-        <h5 class="index-headline featured"><span>Featured</span></h5>
+        <h5 class="index-headline featured"><span>{{ 'TAGS.FEATURED'|t }}</span></h5>
 
         <div class="container featured">
             {% for post in featured %}
@@ -45,7 +45,7 @@
             {% endfor %}
         </div>
 
-        <h5 class="index-headline normal"><span>Regular</span></h5>
+        <h5 class="index-headline normal"><span>{{ 'TAGS.REGULAR'|t }}</span></h5>
         {% endif %}
 
         <div class="cf frame">
