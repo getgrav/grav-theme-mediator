@@ -1,3 +1,9 @@
+# v1.5.2
+## 09/09/2026
+
+1. [](#improved)
+    * The theme is now multilanguage ready: the strings in the templates come from a new `languages.yaml` instead of being hardcoded English [#22](https://github.com/getgrav/grav-theme-mediator/pull/22)
+
 # v1.5.1
 ## 01/15/2021
 
