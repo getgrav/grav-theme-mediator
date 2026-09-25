@@ -8,7 +8,7 @@
             {% endif %}
         </header>
         <section class="post-excerpt" itemprop="description">
-            <p>{{ post.content | striptags | truncate(200) }}</p>
+            <p>{{ post.content | striptags | truncate(200, true, '…') | raw }}</p>
         </section>
         <div class="post-meta">
             <time datetime="{{ post.date | date(site.date_long) }}">{{ post.date | date(site.date_long) }}</time>
