@@ -1,3 +1,9 @@
+# v1.5.3
+## 10/23/2026
+
+1. [](#bugfix)
+    * Post excerpts and share links no longer show `&hellip;` and `&amp;` as text on Grav 2
+
 # v1.5.2
 ## 09/09/2026
 
